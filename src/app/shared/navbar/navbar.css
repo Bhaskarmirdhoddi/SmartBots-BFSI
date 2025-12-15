@@ -1,0 +1,93 @@
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #0a2a6b;
+}
+
+.logo img {
+  height: 32px;
+}
+
+/* Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+}
+
+/* Active dot under "Solutions" */
+.dot {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #4f46e5;
+  border-radius: 50%;
+}
+
+/* CTA */
+.demo-btn {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.demo-btn:hover {
+  background: #4338ca;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .demo-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,185 @@
+<section class="bfsi-hero-section">
+  <div class="container">
+    <div class="row d-flex align-items-center row-gap-3">
+      <div class="col-lg-6">
+        <!-- Left Column - Content -->
+        <div class="text-left space-y-8 pb-4">
+          <div class="inline-block mb-3">
+            <span
+              class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium border border-blue-200">
+              Banking-Ready AI Solutions
+            </span>
+          </div>
+          <h1 class="main-text">
+            Generative AI solutions for banking use cases.
+          </h1>
+          <p class="text-xl text-slate-600 leading-relaxed">
+            Banking-ready AI that works from day one.
+          </p>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            SmartBots AI builds secure, compliant AI agents that empower banks and credit unions to increase operational
+            efficiency and deliver faster service, smarter decisions, and happier customers and members.
+          </p>
+          <!-- CTA -->
+          <div class="pt-4">
+            <button routerLink="/book-demo" class="btn btn-primary">
+              Book a Consultation
+              <span class="material-icons ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+        <!-- Trust Bar with Marquee - No Header Text -->
+        <div class="client-carousel border-top">
+          <div class="company-logos">
+            <div class="logo-item" *ngFor="let company of companies">
+              <img [src]="company.logo" [alt]="company.name">
+              <!-- Uncomment below if you want to display company names -->
+              <!-- <span>{{ company.name }}</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <!-- Right Column - Visual -->
+        <div class="right-content">
+          <img src="assets/images/ai-platform.png" alt="BFSI Hero Image" class="w-full h-auto rounded-lg shadow-lg"
+            width="100%" />
+          <!-- Decorative Elements -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Application Agents Section starting here -->
+<section class="application-agents-section">
+  <div class="container">
+    <div class="row col-12 mb-4 text-center">
+        <h2 class="main-text mb-16">
+          Application Agents
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Specialized AI agents for banks, credit unions, and fintechs
+        </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let agent of agents; let i = index">
+        <div class="agent-card">
+        <img [src]="agent.image"   [alt]="agent.name" class="img-fluid"/>
+        <div class="agent-content">
+          <div class="icon-box">
+            <span class="material-icons">{{ agent.icon }}</span>
+          </div>
+          <h4 class="fw-semibold mb-3">{{ agent.name }}</h4>
+          <p class="text-muted">{{ agent.description }}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Use Cases Section starting here -->
+
+<section class="use-cases-section">
+  <div class="container">
+    <div class="row col-12">
+      <div class="header-text text-center mb-16">
+        <h2 class="main-text">
+          Use Cases for Financial Services & Fintech
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Real-world applications of AI agents in banking
+        </p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let useCase of useCases; let i = index">
+        <div class="use-cases-card">
+        <div class="use-cases-content">
+          <div class="icon-box">
+          <span class="material-icons">{{ useCase.icon }}</span>
+          </div>
+          <h4 class="fw-semibold">{{ useCase.name }}</h4>
+          <p class="text-muted">{{ useCase.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Security & Integrations starting here -->
+
+<section class="security-integrationa-section">
+  <div class="container">
+    <div class="row col-12">
+      <div class="header-text text-center mb-16">
+        <h2 class="main-text">
+          Security & Integrations
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+          Enterprise-grade security with seamless connectivity
+        </p>
+      </div>
+    </div>
+    <!-- Security Section -->
+    <div class="row col-12">
+      <h3 class="text-3xl font-bold text-slate-900 mb-10 text-center">
+        Security
+      </h3>
+      <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center mb-5"
+        *ngFor="let item of securityFeatures; let i = index">
+        <!-- Circular Container -->
+        <div
+          class="bg-white rounded-circle shadow-lg d-flex flex-column align-items-center justify-content-center mb-3 circle-card">
+          <!-- Icon -->
+          <div
+            class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-2 icon-circle">
+            <span class="material-icons text-primary fs-2">
+              {{ item.icon }}
+            </span>
+          </div>
+        </div>
+        <!-- Name -->
+        <h6 class="fw-bold text-dark text-center px-2">
+          {{ item.name }}
+        </h6>
+        <!-- Description -->
+        <p class="text-muted text-center small px-3">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Integrations Section -->
+  <div class="container my-5">
+    <h3 class="text-center mb-5">Integrations</h3>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-center"
+        *ngFor="let item of integrationFeatures; let i = index">
+        <!-- Circular Container -->
+        <div
+          class="bg-white rounded-circle shadow-lg d-flex flex-column align-items-center justify-content-center mb-3 circle-card">
+          <!-- Icon -->
+          <div class="icon-circle mb-3">
+            <span class="material-icons text-success fs-2">
+              {{ item.icon }}
+            </span>
+          </div>
+        </div>
+        <!-- Name -->
+        <h6 class="fw-bold text-dark text-center px-2">
+          {{ item.name }}
+        </h6>
+        <!-- Description -->
+        <p class="text-muted small px-3">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

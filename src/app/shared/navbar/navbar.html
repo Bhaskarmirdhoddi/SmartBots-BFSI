@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand" routerLink="/home">
+      <img
+        src="assets/images/smartbots-logo_blue.png"
+        alt="SmartBots Logo"
+        style="max-height: 48px;"
+      />
+    </a>
+
+    <!-- Toggle Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/why-smartbots" routerLinkActive="active">
+            Why SmartBots
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/meet-team" routerLinkActive="active">
+            Meet the Team
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-primary ms-lg-2" routerLink="/book-demo">
+            Book a Demo
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

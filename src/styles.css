@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.bfsi-hero-section {
+    background-image: linear-gradient(to bottom right, #f8fafc, #eff6ff, #f1f5f9);
+    padding: 4rem 2rem;
+}
+
+section {
+    padding: 4rem 0rem;
+    background-color: #f8fafc;
+}
+
+.application-agents-section {}
+
+.icon-box {
+    width: 64px;
+    height: 64px;
+    background: #dbeafe;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.main-text {
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}

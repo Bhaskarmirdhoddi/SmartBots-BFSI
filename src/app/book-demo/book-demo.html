@@ -1,0 +1,98 @@
+<section class="book-demo-section">
+    <div class="container">
+        <div class="row col-12 mb-4 text-center d-flex align-items-center ">
+            <h2 class="main-text">
+                Ready to Explore Banking-Ready AI?
+            </h2>
+            <p class="text-xl text-blue-200">
+                Book a 15-minute discovery call to see how SmartBots AI can transform your institution
+            </p>
+        </div>
+
+        <div class="row col-lg-8 col-md-10 col-12 mx-auto">
+            <div class="card px-5 py-4">
+                <div *ngIf="!isSubmitted; else submittedTemplate">
+                    <form (ngSubmit)="handleSubmit()" class="space-y-6">
+                        <div>
+                            <label for="name" class="text-slate-700 font-medium mb-2 block">
+                                Full Name *
+                            </label>
+                            <input id="name" name="name" type="text" [(ngModel)]="formData.name" placeholder="John Doe"
+                                class="form-control" required />
+                        </div>
+
+                        <div>
+                            <label for="title" class="text-slate-700 font-medium mb-2 block">
+                                Job Title
+                            </label>
+                            <input id="title" name="title" type="text" [(ngModel)]="formData.title"
+                                placeholder="VP of Digital Banking" class="form-control" />
+                        </div>
+
+                        <div>
+                            <label for="institution" class="text-slate-700 font-medium mb-2 block">
+                                Institution *
+                            </label>
+                            <input id="institution" name="institution" type="text" [(ngModel)]="formData.institution"
+                                placeholder="First National Bank" class="form-control" required />
+
+                        </div>
+
+                        <div>
+                            <label for="email" class="text-slate-700 font-medium mb-2 block">
+                                Email Address *
+                            </label>
+                            <input id="email" name="email" type="email" [(ngModel)]="formData.email"
+                                placeholder="john.doe@bank.com" class="form-control" required />
+
+                        </div>
+
+                        <div>
+                            <label for="useCase" class="text-slate-700 font-medium mb-2 block">
+                                Which use case interests you most? *
+                            </label>
+                            <select id="useCase" name="useCase" [(ngModel)]="formData.useCase" class="form-control"
+                                required>
+                                <option value="">Select a use case</option>
+                                <option *ngFor="let useCase of useCases" [value]="useCase">
+                                    {{ useCase }}
+                                </option>
+                            </select>
+                        </div>
+
+                        <button type="submit" [disabled]="!isFormValid || isSubmitting"
+                            class="btn btn-primary w-100 d-flex justify-content-center align-items-center">
+                            <span *ngIf="isSubmitting" class="d-flex justify-content-center align-items-center">
+                                <span class="material-icons animate-spin mr-2">refresh</span>
+                                Submitting...
+                            </span>
+                            <span *ngIf="!isSubmitting">Book a 15-Minute Discovery Call</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <ng-template #submittedTemplate>
+                <div class="text-center py-12">
+                    <span class="material-icons text-green-600 text-6xl mb-4">check_circle</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
+                    <p class="text-slate-600">
+                        We've received your information and will be in touch within 24 hours.
+                    </p>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</section>
+
+
+<ng-template #submittedTemplate>
+    <div class="text-center p-4">
+        <h4 class="fw-bold text-success mb-2">
+            Thank you, {{ formData.name }}!
+        </h4>
+
+        <p class="text-muted mb-3">
+            Your request has been received. We’ll reach out shortly.
+        </p>
+    </div>
+</ng-template>

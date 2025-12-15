@@ -1,0 +1,54 @@
+<section class="meet-team-section">
+    <div class="container">
+        <div class="row col-12 mb-4 text-center d-flex align-items-center ">
+            <h2 class="main-text">
+        Meet the Team Behind Banking-Ready AI
+      </h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        SmartBots AI is built by a team that understands banking from the inside out — blending decades of financial expertise with the latest in AI innovation.
+      </p>
+    </div>
+
+<div class="row g-4">
+  <div
+    class="col-12 col-md-6 col-lg-3"
+    *ngFor="let member of teamMembers; let i = index"
+  >
+    <div class="team-card text-center">
+      <!-- Avatar -->
+      <div class="avatar-wrapper">
+        <div class="avatar">
+          <img
+            [src]="member.image"
+            [alt]="member.name"
+          />
+        </div>
+      </div>
+
+      <!-- Name and role -->
+      <h3 class="team-name">{{ member.name }}</h3>
+      <p class="team-role">{{ member.role }}</p>
+
+      <!-- Bio -->
+      <p class="team-bio">{{ member.bio }}</p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Additional Team Description -->
+    <div class="row col-lg-8 col-md-10 col-12 mx-auto mt-5">
+      <p class="text-lg">
+        We're a team of operators, technologists, and storytellers obsessed with one mission: building the best AI solutions for banking, credit unions, and financial enterprises. Innovation isn't occasional at SmartBots—it's continuous. We experiment, iterate, and scale boldly so every AI agent we ship sets a new benchmark for security, accuracy, and business impact in finance.
+      </p>
+      
+      <p class="text-lg">
+        Our team constantly explores new models, refines agent intelligence, and designs smarter workflows to solve the industry's toughest operational and member experience challenges. Our solutions evolve at the edge of AI innovation, shaped by a team that believes in progress over perfection. If it's not better, safer, or smarter for BFSI, we don't ship it.
+      </p>
+      
+      <p class="text-lg font-medium">
+        That's how we build AI agents the industry can trust—and rely on.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+
+
+/* Wrapper */
+.feature-list {
+  background: #ffffff;
+  border: 1px solid #e5edf7;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+/* Header button */
+.feature-item {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Left side */
+.feature-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Icon box */
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  background: #eaf2ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon .material-icons {
+  font-size: 22px;
+  color: #2563eb;
+}
+
+/* Title */
+.feature-item h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Chevron */
+.chevron {
+  font-size: 22px;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+/* Expanded content */
+.feature-item-content {
+  padding: 16px 20px 20px 78px; /* aligns under title */
+  background: #ffffff;
+}
+
+/* Description text */
+.feature-item-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+  max-width: 95%;
+}
+
+/* Partner tags */
+.feature-item-content span {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}

@@ -1,0 +1,39 @@
+<section class="why-smartbots-section">
+    <div class="container">
+        <div class="row col-12 mb-4 text-center d-flex align-items-center ">
+            <h2 class="main-text">
+                Why SmartBots
+            </h2>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+                Built for banks and credit unions who demand security, compliance, and results
+            </p>
+        </div>
+
+        <div class="row col-lg-10 col-md-10 col-12 mx-auto">
+            <div *ngFor="let item of whySmartBots">
+                <div class="feature-list">
+                    <button (click)="toggleItem(item.id)" class="feature-item">
+                        <div class="feature-left">
+                            <div class="feature-icon">
+                                <span class="material-icons">{{ item.icon }}</span>
+                            </div>
+                            <h5>{{ item.title }}</h5>
+                        </div>
+                        <span class="material-icons chevron" [class.rotate-180]="isExpanded(item.id)">expand_more</span>
+                    </button>
+                
+                <div *ngIf="isExpanded(item.id)" class="feature-item-content">
+                    <p class="text-slate-600 leading-relaxed">{{ item.description }}</p>
+                    <div *ngIf="item.id === 2" class="mt-4 flex flex-wrap gap-2">
+                        <span
+                            *ngFor="let partner of ['FIS', 'Fiserv', 'Jack Henry', 'Temenos', 'CSI', 'Symitar', 'Salesforce']"
+                            class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">
+                            {{ partner }}
+                        </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

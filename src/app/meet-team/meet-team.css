@@ -1,0 +1,87 @@
+
+.main-text {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+/* Card container */
+.team-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  height: 100%;
+  border: 1px solid #e6edf5;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Avatar */
+.avatar-wrapper {
+  margin-bottom: 24px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .avatar {
+  border-color: #2563eb;
+}
+
+.team-card:hover .avatar img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Name */
+.team-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+/* Role */
+.team-role {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+/* Bio */
+.team-bio {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* Mobile spacing */
+@media (max-width: 576px) {
+  .team-card {
+    padding: 24px 16px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
