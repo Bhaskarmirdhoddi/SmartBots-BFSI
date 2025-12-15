@@ -19,12 +19,7 @@
         color: #ffffff;
     }
 }
-.main-text {
-    font-size: 3.75rem;
-    font-weight: 700;
-    color: #0f172a;
-    line-height: 1.2;
-}
+
 .circle-card {
   width: 220px!important;
   height: 220px!important;
